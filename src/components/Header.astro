@@ -1,0 +1,114 @@
+---
+const nav = [
+  { href: "/services", label: "Услуги" },
+  { href: "/projects", label: "Проекты" },
+  { href: "/prices", label: "Цены" },
+  { href: "/models", label: "Модели" },
+];
+
+const partnerLinks = [
+  { href: "/partners", label: "Партнёрам (продажи)" },
+  { href: "/service-partners", label: "Сервис-партнёрам" },
+];
+
+// Заглушки — потом поменяешь на реальные
+const phone = "8-800-700-68-14";
+const phoneHref = "tel:+79616340392";
+---
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-4">
+    <div class="flex h-16 items-center justify-between gap-3">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900 text-white">I</span>
+        <span>Izotermvan</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-6 md:flex">
+        {nav.map((i) => (
+          <a
+            href={i.href}
+            class="text-sm text-slate-700 hover:text-slate-900"
+          >
+            {i.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Right -->
+      <div class="hidden items-center gap-3 md:flex">
+        <div class="hidden flex-col leading-tight md:flex">
+  <a href={phoneHref} class="text-sm font-medium text-slate-800 hover:text-slate-900">
+    {phone}
+  </a>
+  <span class="text-xs text-slate-500">звонок бесплатный по РФ</span>
+</div>
+        <a
+          href="/contacts#lead"
+          class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+        >
+          Оставить заявку
+        </a>
+
+        <!-- Partner menu (hover) -->
+        <div class="relative group">
+          <button
+            type="button"
+            class="rounded-xl border border-slate-200 px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+            aria-haspopup="true"
+          >
+            Вход
+          </button>
+          <div class="invisible absolute right-0 top-full mt-2 w-64 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg opacity-0 transition group-hover:visible group-hover:opacity-100">
+            {partnerLinks.map((l) => (
+              <a
+                href={l.href}
+                class="block rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile: simple buttons -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a
+          href="/contacts#lead"
+          class="rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white"
+        >
+          Заявка
+        </a>
+
+        <a
+          href="/contacts"
+          class="rounded-xl border border-slate-200 px-3 py-2 text-sm font-medium"
+        >
+          Контакты
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile nav (always visible small list) -->
+    <div class="flex flex-wrap gap-2 pb-3 md:hidden">
+      {nav.map((i) => (
+        <a
+          href={i.href}
+          class="rounded-xl border border-slate-200 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50"
+        >
+          {i.label}
+        </a>
+      ))}
+      {partnerLinks.map((l) => (
+        <a
+          href={l.href}
+          class="rounded-xl border border-slate-200 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>

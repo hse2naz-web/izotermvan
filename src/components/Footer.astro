@@ -1,0 +1,88 @@
+---
+const year = new Date().getFullYear();
+
+const nav = [
+  { href: "/services", label: "Услуги" },
+  { href: "/projects", label: "Проекты" },
+  { href: "/prices", label: "Цены" },
+  { href: "/models", label: "Модели" },
+  { href: "/faq", label: "FAQ" },
+];
+
+const company = [
+  { href: "/about", label: "О компании" },
+  { href: "/contacts", label: "Контакты" },
+  { href: "/privacy", label: "Политика" },
+];
+
+const partners = [
+  { href: "/partners", label: "Партнёрам (продажи)" },
+  { href: "/service-partners", label: "Сервис-партнёрам" },
+];
+
+const phone = "8-800-700-68-14";
+const phoneHref = "tel:+79616340392";
+const email = "sales@izotermvan.ru";
+const emailHref = "mailto:sales@izotermvan.ru";
+---
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="grid gap-3">
+        <div class="text-lg font-semibold tracking-tight">Izotermvan</div>
+        <p class="text-sm text-slate-600">
+          Короткое позиционирование: что делаете и для кого. Потом перепишем под маркетинг.
+        </p>
+        <div class="grid gap-1 text-sm">
+          <a class="text-slate-700 hover:text-slate-900" href={phoneHref}>{phone}</a>
+          <a class="text-slate-700 hover:text-slate-900" href={emailHref}>{email}</a>
+        </div>
+      </div>
+
+      <div class="grid gap-3">
+        <div class="text-sm font-semibold text-slate-900">Разделы</div>
+        <ul class="grid gap-2">
+          {nav.map((i) => (
+            <li>
+              <a class="text-sm text-slate-600 hover:text-slate-900" href={i.href}>{i.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="grid gap-3">
+        <div class="text-sm font-semibold text-slate-900">Компания</div>
+        <ul class="grid gap-2">
+          {company.map((i) => (
+            <li>
+              <a class="text-sm text-slate-600 hover:text-slate-900" href={i.href}>{i.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="grid gap-3">
+        <div class="text-sm font-semibold text-slate-900">Партнёрам</div>
+        <ul class="grid gap-2">
+          {partners.map((i) => (
+            <li>
+              <a class="text-sm text-slate-600 hover:text-slate-900" href={i.href}>{i.label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="/contacts#lead"
+          class="mt-2 inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+        >
+          Оставить заявку
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+      <div>© {year} Izotermvan. Все права защищены.</div>
+      <div>Сделано на Astro + Tailwind</div>
+    </div>
+  </div>
+</footer>

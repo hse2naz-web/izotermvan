@@ -1,0 +1,131 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+  title="Модели рефрижераторов | LADA Granta ВИС и LADA Largus"
+  description="Подберите рефрижератор на базе LADA Granta ВИС или LADA Largus под ваш бизнес."
+>
+
+  <!-- HERO -->
+  <section class="max-w-3xl">
+    <h1 class="text-3xl font-semibold tracking-tight md:text-5xl">
+      Выберите базу для вашего рефрижератора
+    </h1>
+
+    <p class="mt-4 text-slate-700 md:text-lg">
+      Обе модели дорабатываются под ключ: изотермический фургон нужной толщины, 
+      холодильно-отопительная установка (ХОУ), дополнительные опции.
+      Отличие — в объёме, нагрузке и формате бизнеса.
+    </p>
+  </section>
+
+  <!-- СРАВНЕНИЕ -->
+  <section class="mt-16 grid gap-10 md:grid-cols-2">
+
+    <!-- Лада Ларгус -->
+    <div class="rounded-2xl border border-slate-200 p-8">
+      <h2 class="text-xl font-semibold">Лада Ларгус</h2>
+
+      <p class="mt-3 text-sm text-slate-600">
+        Компактное и экономичное решение для городских доставок и малого бизнеса.
+      </p>
+
+      <ul class="mt-6 grid gap-2 text-sm text-slate-700">
+        <li>✓ Подходит для фармы, цветов, небольших поставок</li>
+        <li>✓ Удобна для плотной городской логистики</li>
+        <li>✓ Ниже стоимость входа</li>
+        <li>✓ Экономичный расход топлива</li>
+      </ul>
+
+      <div class="mt-8 border-t pt-6">
+        <div class="text-sm font-semibold text-slate-900">Кому подходит:</div>
+        <p class="mt-2 text-sm text-slate-600">
+          Аптеки, цветочные доставки, фермерские хозяйства, малые кафе и кондитерские.
+        </p>
+      </div>
+
+      <a href="/contacts#lead"
+         class="mt-8 inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+        Рассчитать LADA LARGUS
+      </a>
+    </div>
+
+    <!-- Лада Гранта ВИС -->
+    <div class="rounded-2xl border border-slate-200 p-8">
+      <h2 class="text-xl font-semibold">Лада Гранта ВИС</h2>
+
+      <p class="mt-3 text-sm text-slate-600">
+        Более вместительный вариант для интенсивной коммерческой эксплуатации.
+      </p>
+
+      <ul class="mt-6 grid gap-2 text-sm text-slate-700">
+        <li>✓ Больше объём и грузоподъёмность</li>
+        <li>✓ Подходит для мяса, полуфабрикатов, молочной продукции</li>
+        <li>✓ Удобен для межрегиональных поставок</li>
+        <li>✓ Оптимален для растущего бизнеса</li>
+      </ul>
+
+      <div class="mt-8 border-t pt-6">
+        <div class="text-sm font-semibold text-slate-900">Кому подходит:</div>
+        <p class="mt-2 text-sm text-slate-600">
+          Производители продуктов, оптовики, поставщики из РБ, отели и сетевые рестораны.
+        </p>
+      </div>
+
+      <a href="/contacts#lead"
+         class="mt-8 inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+        Рассчитать LADA GRANTA ВИС
+      </a>
+    </div>
+
+  </section>
+
+  <!-- БЛОК ОДИНАКОВО ДЛЯ ОБЕИХ МОДЕЛЕЙ -->
+  <section class="mt-20">
+    <h2 class="text-2xl font-semibold tracking-tight">
+      Что входит в переоборудование
+    </h2>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">Изотермический фургон</h3>
+        <p class="mt-2 text-sm text-slate-600">
+          Толщина стен под выбранный температурный режим.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">ХОУ</h3>
+        <p class="mt-2 text-sm text-slate-600">
+          Подбор холодильно-отопительной установки под условия эксплуатации.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">Дополнительные опции</h3>
+        <p class="mt-2 text-sm text-slate-600">
+          Пневмоподвеска, стеллажи, сигнализация с GPS и автозапуском,
+          камеры заднего вида, 2DIN, кондиционер салона.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mt-20 rounded-2xl bg-slate-900 p-10 text-white">
+    <h2 class="text-2xl font-semibold">
+      Не уверены, какую модель выбрать?
+    </h2>
+
+    <p class="mt-3 text-sm text-slate-300">
+      Подберём решение под ваш температурный режим и объём перевозок.
+    </p>
+
+    <a href="/contacts#lead"
+       class="mt-6 inline-block rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-100">
+      Получить консультацию
+    </a>
+  </section>
+
+</BaseLayout>

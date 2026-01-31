@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url";
 
 import vercel from "@astrojs/vercel";
 
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineConfig({
   output: "server",
 
@@ -13,6 +15,8 @@ export default defineConfig({
         "@": fileURLToPath(new URL("./src", import.meta.url)),
       },
     },
+
+    plugins: [tailwindcss()],
   },
 
   adapter: vercel(),

@@ -1,0 +1,348 @@
+---
+import MaintenanceLayout from "@/layouts/MaintenanceLayout.astro";
+
+const PHONE = "8-800-700-68-14";
+const EMAIL = "sales@izotermvan.ru";
+---
+
+<MaintenanceLayout title="МИРКОМТРАНС — обновление сайта">
+  <main class="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900">
+    <!-- subtle premium background -->
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-slate-100"></div>
+      <div class="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#1E6FB6]/10 blur-3xl"></div>
+      <div class="absolute -bottom-56 -right-24 h-[520px] w-[520px] rounded-full bg-slate-900/10 blur-3xl"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-[0.06]" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M 56 0 L 0 0 0 56" fill="none" stroke="currentColor" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" class="text-slate-900"></rect>
+      </svg>
+    </div>
+
+    <section class="relative mx-auto max-w-[2000px] px-4 py-10 sm:py-14">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <!-- LEFT CARD -->
+        <div class="rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-[0_20px_60px_-40px_rgba(2,6,23,0.35)] backdrop-blur">
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              <img src="/logo.png" alt="МИРКОМТРАНС" class="h-full w-full object-contain p-1" />
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-slate-900">МИРКОМТРАНС</div>
+              <div class="text-xs text-slate-500">Городские рефрижераторы • Производство</div>
+            </div>
+          </div>
+
+          <h1 class="mt-8 text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl">
+            Обновляем сайт.<br class="hidden sm:block" />
+            Работаем в штатном режиме.
+          </h1>
+
+          <p class="mt-4 max-w-prose text-base leading-relaxed text-slate-600">
+            Подберём авторефрижератор под ваш бизнес или поможем с обслуживанием уже готового автомобиля.
+            Оставьте телефон — перезвоним.
+          </p>
+
+          <div class="mt-6 grid gap-2 text-sm text-slate-700">
+            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span class="text-slate-500">Горячая линия:</span>
+              <a class="font-semibold text-[#1E6FB6] underline underline-offset-4" href="tel:88007006814">{PHONE}</a>
+              <span class="text-slate-400">•</span>
+              <span class="text-slate-500">звонок бесплатный по РФ</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span class="text-slate-500">Почта:</span>
+              <a class="font-semibold text-[#1E6FB6] underline underline-offset-4" href={"mailto:" + EMAIL}>{EMAIL}</a>
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <button
+              type="button"
+              class="choiceBtn group relative rounded-2xl border border-transparent bg-[#1E6FB6] p-5 text-left text-white shadow-sm transition hover:bg-[#155A96] focus:outline-none focus:ring-2 focus:ring-[#1E6FB6]/40"
+              data-topic="Купить авторефрижератор от 1590тр."
+            >
+              <div class="text-base font-semibold">Купить авторефрижератор от 1590тр.</div>
+              <div class="mt-1 text-sm text-white/90">
+                Подбор базы, фургона и ХОУ под температурный режим
+              </div>
+              <div class="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-white/60 transition group-[.isActive]:ring-2"></div>
+            </button>
+
+            <button
+              type="button"
+              class="choiceBtn group relative rounded-2xl border border-slate-200 bg-white p-5 text-left text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#1E6FB6]/30"
+              data-topic="Техподдержка по готовому авто"
+            >
+              <div class="text-base font-semibold">Техподдержка</div>
+              <div class="mt-1 text-sm text-slate-600">Сервис и консультации по эксплуатации</div>
+              <div class="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-[#1E6FB6]/30 transition group-[.isActive]:ring-2"></div>
+            </button>
+          </div>
+
+          <div class="mt-8 rounded-2xl border border-slate-200/70 bg-white p-5">
+            <div class="text-sm font-semibold text-slate-900">Что можно написать в комментарии</div>
+            <div class="mt-2 text-sm text-slate-600">
+              Форма оплаты: нал/безнал; Способ приобретения: прямой договор/лизинг субсидией 10%/грант с господдержкой; Выбор базы: Granta/Largus; Температурный режим: 0с...+12с/-10с...+12с/-20с...+20; Объём фургона: 3куба/4куба/5кубов/6кубов; Опции: пневмо/камера заднего вида/стеллажи/комплект зимней резины/сигнализация с автозапуском и GPS.
+            </div>
+          </div>
+        </div>
+
+<!-- RIGHT WRAPPER (нужен, чтобы машины могли "вылетать" вправо) -->
+<div class="relative">
+  <!-- RIGHT CARD -->
+  <div class="relative min-h-[640px] lg:min-h-[720px] overflow-hidden rounded-3xl border border-[#BFD7FF] bg-white shadow-[0_30px_80px_-50px_rgba(2,6,23,0.55)]">
+
+    <!-- фон-картинка + мягкий градиент сверху -->
+    <div class="absolute inset-0 bg-[url('/right-bg.png')] bg-cover bg-right bg-no-repeat"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/75 via-white/35 to-slate-900/35"></div>
+
+
+    <!-- легкая “сетка” поверх фона (если right-bg.png уже с сеткой — можно удалить) -->
+    <div
+      class="absolute inset-0 opacity-[0.14]"
+      style="
+        background-image:
+          linear-gradient(to right, rgba(30,58,138,.35) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(30,58,138,.35) 1px, transparent 1px);
+        background-size: 44px 44px;
+      "
+    ></div>
+
+    <!-- контент (форма) -->
+    <div class="relative z-20 p-8 lg:p-10">
+      <div class="max-w-[420px] rounded-3xl border border-white/60 bg-white/85 p-7 shadow-[0_18px_50px_-35px_rgba(2,6,23,0.45)] backdrop-blur">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="text-lg font-semibold text-slate-900">Заявка</div>
+            <div class="mt-1 text-sm text-slate-600">
+              Вы выбрали: <span id="topicLabel" class="font-semibold text-slate-900">Купить авторефрижератор</span>
+            </div>
+          </div>
+
+          <!-- декоративный крестик -->
+          <button type="button" class="rounded-xl p-2 text-slate-400 hover:bg-slate-50 hover:text-slate-600" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <form id="maintenanceForm" class="mt-6 grid gap-4">
+          <input type="hidden" name="topic" value="Купить авторефрижератор от 1590тр." />
+
+          <label class="grid gap-1 text-sm">
+            <span class="text-slate-700">Телефон <span class="text-rose-500">*</span></span>
+            <input
+              class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none transition
+                     focus:border-[#1E6FB6]/60 focus:ring-4 focus:ring-[#1E6FB6]/10"
+              name="phone"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="+7… / 8…"
+              required
+            />
+            <span id="mPhoneHelp" class="hidden text-xs text-rose-600">Укажите телефон: минимум 10 цифр.</span>
+          </label>
+
+          <label class="grid gap-1 text-sm">
+            <span class="text-slate-700">Комментарий</span>
+            <textarea
+              class="min-h-28 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none transition
+                     focus:border-[#1E6FB6]/60 focus:ring-4 focus:ring-[#1E6FB6]/10"
+              name="comment"
+              placeholder="База (Granta/Largus), режим, город, срочность"
+            ></textarea>
+          </label>
+
+          <button
+            id="mBtn"
+            class="rounded-2xl bg-gradient-to-r from-slate-950 to-slate-800 px-6 py-3 text-sm font-semibold text-white
+                   shadow-sm transition hover:opacity-95 active:opacity-90 disabled:opacity-60"
+            type="submit"
+          >
+            Отправить заявку
+          </button>
+
+          <div id="mMsg" class="hidden rounded-2xl border px-3 py-2 text-sm"></div>
+
+          <p class="text-xs text-slate-500">
+            Нажимая кнопку, вы соглашаетесь с
+            <a class="underline underline-offset-4" href="/privacy">политикой обработки данных</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+
+   
+   <!-- ПРЕИМУЩЕСТВА -->
+<div class="absolute bottom-8 left-10 right-10 z-30">
+  <div class="grid gap-10 sm:grid-cols-3 text-white">
+
+    <!-- 1 -->
+    <div class="flex items-center gap-4">
+      <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20 backdrop-blur">
+        <svg class="h-6 w-6 stroke-[2.3]" viewBox="0 0 24 24" fill="none">
+          <path d="M3 7.5h11v9H3v-9Z" stroke="currentColor"/>
+          <path d="M14 10h4.2l2.3 2.6V16H14v-6Z" stroke="currentColor"/>
+          <path d="M7.3 18.5a1.7 1.7 0 1 0 0-3.4 1.7 1.7 0 0 0 0 3.4Z" stroke="currentColor"/>
+          <path d="M17.8 18.5a1.7 1.7 0 1 0 0-3.4 1.7 1.7 0 0 0 0 3.4Z" stroke="currentColor"/>
+        </svg>
+      </div>
+
+      <div class="leading-tight">
+        <div class="text-[28px] font-bold tracking-tight">
+          Доставка<span class="align-top text-[16px] font-bold">+</span>
+        </div>
+        <div class="text-[14px] font-semibold opacity-95">
+          по территории РФ
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="flex items-center gap-4">
+      <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20 backdrop-blur">
+        <svg class="h-6 w-6 stroke-[2.3]" viewBox="0 0 24 24" fill="none">
+          <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor"/>
+          <path d="M12 7v5l3.2 1.9" stroke="currentColor"/>
+        </svg>
+      </div>
+
+      <div class="leading-tight">
+        <div class="text-[26px] font-bold tracking-tight">
+          срок <span class="text-[32px]">10</span>
+        </div>
+        <div class="text-[14px] font-semibold opacity-95">
+          рабочих дней
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="flex items-center gap-4">
+      <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20 backdrop-blur">
+        <svg class="h-6 w-6 stroke-[2.3]" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3 19 6.5V12c0 5-3.1 8.4-7 9.9C8.1 20.4 5 17 5 12V6.5L12 3Z" stroke="currentColor"/>
+          <path d="M9.2 12.2 11 14l3.8-4.1" stroke="currentColor"/>
+        </svg>
+      </div>
+
+      <div class="leading-tight">
+        <div class="text-[26px] font-bold tracking-tight">
+          Гарантия
+        </div>
+        <div class="text-[14px] font-semibold opacity-95">
+          1 год / 100&nbsp;000 км
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- VANS OUTSIDE: ВОТ ЭТО ГЛАВНОЕ — машины "вылетают" за правую границу карточки -->
+  <div
+    class="pointer-events-none absolute z-30 hidden select-none lg:block
+           right-[0px] top-[220px] w-[580px] max-w-none"
+  >
+    <img
+      src="/images/right-vans.png"
+      alt="Городские рефрижераторы MIRKOMTRANS"
+      class="w-full object-contain drop-shadow-[0_28px_42px_rgba(2,6,23,0.25)]"
+      loading="eager"
+    />
+  </div>
+</div>
+
+
+
+    <script>
+      const form = document.getElementById("maintenanceForm");
+      const msg = document.getElementById("mMsg");
+      const btn = document.getElementById("mBtn");
+      const phoneHelp = document.getElementById("mPhoneHelp");
+      const topicLabel = document.getElementById("topicLabel");
+      const choiceBtns = document.querySelectorAll(".choiceBtn");
+
+      function setMsg(kind, text) {
+        msg.className =
+          "rounded-2xl border px-3 py-2 text-sm " +
+          (kind === "ok"
+            ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+            : "border-rose-200 bg-rose-50 text-rose-800");
+        msg.textContent = text;
+        msg.classList.remove("hidden");
+      }
+
+      const digits = (s) => (s || "").replace(/\\D/g, "");
+
+      function setActive(btnEl) {
+        choiceBtns.forEach((x) => x.classList.remove("isActive"));
+        btnEl.classList.add("isActive");
+        const topic = btnEl.getAttribute("data-topic") || "Купить авторефрижератор";
+        form.elements.topic.value = topic;
+        topicLabel.textContent = topic;
+      }
+
+      choiceBtns.forEach((b) => {
+        b.addEventListener("click", () => setActive(b));
+      });
+
+      if (choiceBtns[0]) setActive(choiceBtns[0]);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        msg.classList.add("hidden");
+        phoneHelp.classList.add("hidden");
+
+        const phone = form.elements.phone.value.trim();
+        const topic = form.elements.topic.value;
+        const comment = form.elements.comment.value.trim();
+
+        if (digits(phone).length < 10) {
+          phoneHelp.classList.remove("hidden");
+          setMsg("err", "Проверьте номер телефона (минимум 10 цифр).");
+          return;
+        }
+
+        btn.disabled = true;
+        const old = btn.textContent;
+        btn.textContent = "Отправляем…";
+
+        try {
+          const res = await fetch("/api/lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              phone,
+              base: topic,
+              temp: "—",
+              comment,
+              pagePath: "maintenance-home",
+              pageUrl: window.location.href,
+              referrer: document.referrer || "",
+              utm: Object.fromEntries(new URLSearchParams(window.location.search)),
+            }),
+          });
+
+          if (!res.ok) throw new Error("Send error");
+
+          setMsg("ok", "Отправлено! Мы свяжемся с вами.");
+          form.reset();
+          form.elements.topic.value = topic;
+          topicLabel.textContent = topic;
+        } catch (err) {
+          setMsg("err", "Ошибка отправки. Позвоните 8-800-700-68-14.");
+        } finally {
+          btn.disabled = false;
+          btn.textContent = old;
+        }
+      });
+    </script>
+  </main>
+</MaintenanceLayout>

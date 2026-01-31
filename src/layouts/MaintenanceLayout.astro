@@ -1,35 +1,38 @@
 ---
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+const { title = "МИРКОМТРАНС — обновление сайта" } = Astro.props;
 import "@/styles/global.css";
-
-const {
-  title = "Izotermvan",
-  description = "Описание компании",
-  canonical = "",
-} = Astro.props;
 ---
+
 <!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <title>Авторефрижераторы в наличии — МИРКОМТРАНС</title>
-
     <meta name="description" content="Производство и продажа городских авторефрижераторов. От 10 дней. Гарантия 1 год / 100 000 км. Оставьте заявку — перезвоним за 10 минут.">
-
-    <meta property="og:title" content="Авторефрижераторы под ключ — МИРКОМТРАНС">
+    <meta property="og:title" content="Авторефрижераторы Лада ВИС Гранта Ларгус под ключ — МИРКОМТРАНС">
     <meta property="og:description" content="700+ реализованных проектов. Производство с 2014 года.">
     <meta property="og:image" content="/images/og-preview.jpg">
     <meta property="og:type" content="website">
 
-    <meta name="description" content={description} />
-    {canonical && <link rel="canonical" href={canonical} />}
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+<!-- PWA -->
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#0B49C7" />
+
+<!-- iOS (добавляет "standalone" поведение) -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="МИРКОМТРАНС" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -47,12 +50,7 @@ const {
 
 
   </head>
-  <body class="min-h-screen bg-white text-slate-900 antialiased">
-    <Header />
-    <main class="mx-auto max-w-6xl px-4 py-10">
-      <slot />
-    </main>
-    <Footer />
+  <body class="bg-slate-50 text-slate-900">
+    <slot />
   </body>
 </html>
-
